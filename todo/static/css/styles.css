@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    color: #111;
+}
+
+.center-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box, .task-box {
+    text-align: center;
+    padding: 40px;
+    border-radius: 16px;
+    background-color: #fefefe;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+}
+
+.box h2, .task-box h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border: 1.8px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 200px;
+    background-color: #4F3DFE;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(79, 61, 254, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #3a2bd4;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(79, 61, 254, 0.3);
+}
+
+.task-item {
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.task-item span.status {
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.task-item a,
+.action-links a,
+.logout-link {
+    margin: 0 5px;
+    color: #4F3DFE;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.task-item a:hover,
+.action-links a:hover,
+.logout-link:hover {
+    text-decoration: underline;
+}
+
+.action-links {
+    margin-top: 20px;
+}

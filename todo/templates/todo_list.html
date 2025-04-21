@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="center-container">
+    <div class="task-box">
+        <h2>Your Tasks</h2>
+        {% for todo in todos %}
+            <div class="task-item">
+                • {{ todo.task }} -
+                <span class="status">{% if todo.completed %}✔{% else %}<span style="color:crimson">❌</span>{% endif %}</span>
+                <a href="{% url 'edit_task' task_id=todo.id %}">Edit</a> |
+                <a href="{% url 'delete_task' task_id=todo.id %}">Delete</a>
+            </div>
+        {% empty %}
+            <p>No tasks found.</p>
+        {% endfor %}
+        <div class="action-links">
+            <a href="{% url 'add_task' %}">Add New Task</a> |
+            <a href="{% url 'logout' %}" class="logout-link">Logout</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

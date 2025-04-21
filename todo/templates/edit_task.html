@@ -1,0 +1,16 @@
+<!-- edit_task.html -->
+{% extends 'base.html' %}
+{% block content %}
+<div class="center-container">
+    <div class="box">
+        <h2>Edit Task</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save Changes</button>
+        </form>
+        <br>
+        <a href="{% url 'todo_list' %}" class="logout-link">Back to Task List</a>
+    </div>
+</div>
+{% endblock %}
